@@ -1,0 +1,131 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; }
+    body { margin: 0; }
+    .root { font-family: 'Plus Jakarta Sans', system-ui, -apple-system, 'Segoe UI', sans-serif; }
+    a { color: #457D1F; text-decoration: underline; }
+    a:hover { color: #2F5A15; }
+    .swatch { display:flex; flex-direction:column; gap:8px; }
+    .swatch-chip { width:100%; height:72px; border-radius:14px; box-shadow: inset 0 0 0 1px rgba(28,27,23,0.06); }
+    .swatch-name { font-size:13px; font-weight:700; color:#1C1B17; }
+    .swatch-meta { font-size:12px; color:#8B877D; }
+    .section-title { font-size:13px; font-weight:700; letter-spacing:0.04em; color:#1C1B17; text-transform:uppercase; }
+    .section-sub { font-size:13px; line-height:1.6; color:#57544C; max-width:640px; }
+  </style>
+</helmet>
+
+<div class="root" style="width:1280px;min-height:1500px;background:#FAF7F0;padding:56px 64px 64px;">
+  <div style="display:flex;flex-direction:column;gap:44px;">
+
+    <div style="display:flex;flex-direction:column;gap:10px;">
+      <span style="font-size:13px;font-weight:700;letter-spacing:0.08em;color:#5FA62C;text-transform:uppercase;">Fondations</span>
+      <h1 style="margin:0;font-size:34px;font-weight:800;color:#1C1B17;">Couleurs</h1>
+      <p class="section-sub">Une base neutre chaleureuse, un accent de marque unique (vert Teranga), un second accent solaire utilisé avec parcimonie, et des couleurs sémantiques strictement fonctionnelles — jamais décoratives.</p>
+    </div>
+
+    <div style="display:flex;flex-direction:column;gap:18px;">
+      <span class="section-title">Neutres — surfaces &amp; texte</span>
+      <div style="display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px;">
+        <div class="swatch"><div class="swatch-chip" style="background:#FAF7F0;"></div><div><div class="swatch-name">Surface 0</div><div class="swatch-meta">#FAF7F0 — fond d'application</div></div></div>
+        <div class="swatch"><div class="swatch-chip" style="background:#FFFFFF;"></div><div><div class="swatch-name">Surface 1</div><div class="swatch-meta">#FFFFFF — cartes, feuilles</div></div></div>
+        <div class="swatch"><div class="swatch-chip" style="background:#F3EFE4;"></div><div><div class="swatch-name">Surface 2</div><div class="swatch-meta">#F3EFE4 — champs, zones creuses</div></div></div>
+        <div class="swatch"><div class="swatch-chip" style="background:#EFEBE0;"></div><div><div class="swatch-name">Ink 100</div><div class="swatch-meta">#EFEBE0 — séparateurs discrets</div></div></div>
+        <div class="swatch"><div class="swatch-chip" style="background:#E4E0D6;"></div><div><div class="swatch-name">Ink 200</div><div class="swatch-meta">#E4E0D6 — bordures</div></div></div>
+        <div class="swatch"><div class="swatch-chip" style="background:#8B877D;"></div><div><div class="swatch-name">Ink 400</div><div class="swatch-meta">#8B877D — texte discret / placeholder</div></div></div>
+        <div class="swatch"><div class="swatch-chip" style="background:#57544C;"></div><div><div class="swatch-name">Ink 700</div><div class="swatch-meta">#57544C — texte secondaire</div></div></div>
+        <div class="swatch"><div class="swatch-chip" style="background:#1C1B17;"></div><div><div class="swatch-name">Ink 900</div><div class="swatch-meta">#1C1B17 — texte principal</div></div></div>
+      </div>
+    </div>
+
+    <div style="height:1px;background:#E4E0D6;"></div>
+
+    <div style="display:flex;flex-direction:column;gap:18px;">
+      <span class="section-title">Accents de marque</span>
+      <p class="section-sub">Vert Teranga : action principale et états actifs. Solaire : mise en avant secondaire, jamais pour du texte long.</p>
+      <div style="display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px;">
+        <div class="swatch"><div class="swatch-chip" style="background:#EFF7E1;"></div><div><div class="swatch-name">Brand 50</div><div class="swatch-meta">#EFF7E1 — fond de badge</div></div></div>
+        <div class="swatch"><div class="swatch-chip" style="background:#A9D96B;"></div><div><div class="swatch-name">Brand 300</div><div class="swatch-meta">#A9D96B — état désactivé actif</div></div></div>
+        <div class="swatch"><div class="swatch-chip" style="background:#7AC13B;"></div><div><div class="swatch-name">Brand 500 · Primaire</div><div class="swatch-meta">#7AC13B — CTA principal</div></div></div>
+        <div class="swatch"><div class="swatch-chip" style="background:#5FA62C;"></div><div><div class="swatch-name">Brand 600</div><div class="swatch-meta">#5FA62C — survol / appui</div></div></div>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px;">
+        <div class="swatch"><div class="swatch-chip" style="background:#457D1F;"></div><div><div class="swatch-name">Brand 700</div><div class="swatch-meta">#457D1F — texte sur fond clair</div></div></div>
+        <div class="swatch"><div class="swatch-chip" style="background:#FDF0C6;"></div><div><div class="swatch-name">Sun 100</div><div class="swatch-meta">#FDF0C6 — fond de badge solaire</div></div></div>
+        <div class="swatch"><div class="swatch-chip" style="background:#F7C948;"></div><div><div class="swatch-name">Sun 400 · Secondaire</div><div class="swatch-meta">#F7C948 — accent solaire</div></div></div>
+        <div class="swatch"><div class="swatch-chip" style="background:#B8790E;"></div><div><div class="swatch-name">Sun 700</div><div class="swatch-meta">#B8790E — texte sur fond solaire</div></div></div>
+      </div>
+    </div>
+
+    <div style="height:1px;background:#E4E0D6;"></div>
+
+    <div style="display:flex;flex-direction:column;gap:18px;">
+      <span class="section-title">Couleurs sémantiques</span>
+      <p class="section-sub">Un sens fixe, jamais interchangé. « Urgent » reçoit toujours le traitement le plus visible de tout le système — c'est le seul signal qui doit être impossible à manquer (PRD 5.1, signalement urgent).</p>
+      <div style="display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;">
+
+        <div style="background:#FFFFFF;border-radius:18px;padding:20px;display:flex;flex-direction:column;gap:12px;box-shadow:0 1px 2px rgba(28,27,23,0.04),0 8px 20px rgba(28,27,23,0.05);">
+          <div style="width:100%;height:44px;border-radius:12px;background:#5FA62C;"></div>
+          <div><div class="swatch-name">Succès</div><div class="swatch-meta">#5FA62C — confirmation d'envoi, synchronisé</div></div>
+        </div>
+        <div style="background:#FFFFFF;border-radius:18px;padding:20px;display:flex;flex-direction:column;gap:12px;box-shadow:0 1px 2px rgba(28,27,23,0.04),0 8px 20px rgba(28,27,23,0.05);">
+          <div style="width:100%;height:44px;border-radius:12px;background:#D98A12;"></div>
+          <div><div class="swatch-name">Attention</div><div class="swatch-meta">#D98A12 — seuil d'alerte, à vérifier</div></div>
+        </div>
+        <div style="background:#FFFFFF;border-radius:18px;padding:20px;display:flex;flex-direction:column;gap:12px;box-shadow:0 1px 2px rgba(28,27,23,0.04),0 8px 20px rgba(28,27,23,0.05);">
+          <div style="width:100%;height:44px;border-radius:12px;background:#3E82C9;"></div>
+          <div><div class="swatch-name">Information</div><div class="swatch-meta">#3E82C9 — en attente de synchronisation</div></div>
+        </div>
+        <div style="background:#1C1B17;border-radius:18px;padding:20px;display:flex;flex-direction:column;gap:12px;box-shadow:0 4px 16px rgba(197,58,62,0.18);">
+          <div style="display:flex;align-items:center;gap:8px;width:100%;height:44px;border-radius:12px;background:#E5484D;padding:0 14px;">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 2 20h20L12 3Z"/><path d="M12 10v4"/><circle cx="12" cy="17" r="0.6" fill="#FFFFFF" stroke="none"/></svg>
+            <span style="font-size:13px;font-weight:700;color:#FFFFFF;">Urgent</span>
+          </div>
+          <div><div class="swatch-name" style="color:#FFFFFF;">Urgent / Danger</div><div class="swatch-meta" style="color:#C8C4B8;">#E5484D — signalement urgent, priorité absolue</div></div>
+        </div>
+
+      </div>
+    </div>
+
+    <div style="height:1px;background:#E4E0D6;"></div>
+
+    <div style="display:flex;flex-direction:column;gap:18px;">
+      <span class="section-title">Couleurs fonctionnelles — données</span>
+      <p class="section-sub">Réservées aux visualisations et étiquettes du tableau de bord : échelle de satisfaction et étiquettes de site. Ne remplacent jamais un accent de marque.</p>
+
+      <div style="display:flex;flex-direction:column;gap:12px;">
+        <span style="font-size:12px;font-weight:700;color:#8B877D;text-transform:uppercase;letter-spacing:0.04em;">Échelle de satisfaction (4 points)</span>
+        <div style="display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;">
+          <div style="background:#FBE2E1;border-radius:16px;padding:16px;display:flex;flex-direction:column;gap:6px;"><div class="swatch-name">Insatisfait</div><div class="swatch-meta">#E5484D</div></div>
+          <div style="background:#FDF0C6;border-radius:16px;padding:16px;display:flex;flex-direction:column;gap:6px;"><div class="swatch-name">Moyen</div><div class="swatch-meta">#E0A315</div></div>
+          <div style="background:#E9F5DC;border-radius:16px;padding:16px;display:flex;flex-direction:column;gap:6px;"><div class="swatch-name">Satisfait</div><div class="swatch-meta">#7AC13B</div></div>
+          <div style="background:#DCEFC0;border-radius:16px;padding:16px;display:flex;flex-direction:column;gap:6px;"><div class="swatch-name">Très satisfait</div><div class="swatch-meta">#457D1F</div></div>
+        </div>
+      </div>
+
+      <div style="display:flex;flex-direction:column;gap:12px;">
+        <span style="font-size:12px;font-weight:700;color:#8B877D;text-transform:uppercase;letter-spacing:0.04em;">Étiquettes de site (multi-site, préparé pour le futur)</span>
+        <div style="display:flex;gap:10px;">
+          <span style="font-size:13px;font-weight:600;color:#2E6CA6;background:#E1EEF9;border-radius:999px;padding:8px 16px;">Dakar</span>
+          <span style="font-size:13px;font-weight:600;color:#B8790E;background:#FDF0C6;border-radius:999px;padding:8px 16px;">Diamniadio</span>
+          <span style="font-size:13px;font-weight:600;color:#1B8A84;background:#DDF3F1;border-radius:999px;padding:8px 16px;">Saly</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+</x-dc>
+</body>
+</html>

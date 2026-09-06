@@ -1,0 +1,10 @@
+{
+  "artboards": [
+    { "file": "Main.dc.html", "x": 0, "y": 0, "w": 1000, "h": 1300, "title": "Vue d'ensemble" },
+    { "file": "Colors.dc.html", "x": 1120, "y": 0, "w": 1280, "h": 1500, "title": "Couleurs" },
+    { "file": "Typography.dc.html", "x": 0, "y": 1640, "w": 1280, "h": 1400, "title": "Typographie" },
+    { "file": "SpacingGrid.dc.html", "x": 1400, "y": 1640, "w": 1280, "h": 1300, "title": "Espacement & élévation" },
+    { "file": "Iconography.dc.html", "x": 0, "y": 3180, "w": 1280, "h": 1300, "title": "Iconographie" }
+  ],
+  "launch": { "view": "canvas" }
+}

@@ -1,0 +1,111 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; }
+    body { margin: 0; }
+    .root { font-family: 'Plus Jakarta Sans', system-ui, -apple-system, 'Segoe UI', sans-serif; }
+    a { color: #457D1F; text-decoration: underline; }
+    a:hover { color: #2F5A15; }
+    .section-title { font-size:13px; font-weight:700; letter-spacing:0.04em; color:#1C1B17; text-transform:uppercase; }
+    .section-sub { font-size:13px; line-height:1.6; color:#57544C; max-width:640px; }
+    .card { background:#FFFFFF; border-radius:20px; padding:28px 32px; box-shadow:0 1px 2px rgba(28,27,23,0.04),0 8px 20px rgba(28,27,23,0.05); }
+  </style>
+</helmet>
+
+<div class="root" style="width:1280px;min-height:1300px;background:#FAF7F0;padding:56px 64px 64px;">
+  <div style="display:flex;flex-direction:column;gap:36px;">
+
+    <div style="display:flex;flex-direction:column;gap:10px;">
+      <span style="font-size:13px;font-weight:700;letter-spacing:0.08em;color:#5FA62C;text-transform:uppercase;">Fondations</span>
+      <h1 style="margin:0;font-size:34px;font-weight:800;color:#1C1B17;">Espacement, rayons &amp; élévation</h1>
+      <p class="section-sub">Une échelle en base 4, des rayons généreux pour un ton accueillant, et une élévation discrète — jamais un ombrage lourd qui alourdit une interface pensée pour aller vite.</p>
+    </div>
+
+    <div class="card" style="display:flex;flex-direction:column;gap:16px;">
+      <span class="section-title">Échelle d'espacement</span>
+      <div style="display:flex;flex-direction:column;gap:12px;">
+
+        <div style="display:flex;align-items:center;gap:16px;"><span style="width:110px;font-size:12px;font-weight:600;color:#57544C;">space-1 · 4px</span><div style="height:14px;width:4px;background:#7AC13B;border-radius:4px;"></div></div>
+        <div style="display:flex;align-items:center;gap:16px;"><span style="width:110px;font-size:12px;font-weight:600;color:#57544C;">space-2 · 8px</span><div style="height:14px;width:8px;background:#7AC13B;border-radius:4px;"></div></div>
+        <div style="display:flex;align-items:center;gap:16px;"><span style="width:110px;font-size:12px;font-weight:600;color:#57544C;">space-3 · 12px</span><div style="height:14px;width:12px;background:#7AC13B;border-radius:4px;"></div></div>
+        <div style="display:flex;align-items:center;gap:16px;"><span style="width:110px;font-size:12px;font-weight:600;color:#57544C;">space-4 · 16px</span><div style="height:14px;width:16px;background:#7AC13B;border-radius:4px;"></div></div>
+        <div style="display:flex;align-items:center;gap:16px;"><span style="width:110px;font-size:12px;font-weight:600;color:#57544C;">space-5 · 24px</span><div style="height:14px;width:24px;background:#7AC13B;border-radius:4px;"></div></div>
+        <div style="display:flex;align-items:center;gap:16px;"><span style="width:110px;font-size:12px;font-weight:600;color:#57544C;">space-6 · 32px</span><div style="height:14px;width:32px;background:#7AC13B;border-radius:4px;"></div></div>
+        <div style="display:flex;align-items:center;gap:16px;"><span style="width:110px;font-size:12px;font-weight:600;color:#57544C;">space-7 · 48px</span><div style="height:14px;width:48px;background:#7AC13B;border-radius:4px;"></div></div>
+        <div style="display:flex;align-items:center;gap:16px;"><span style="width:110px;font-size:12px;font-weight:600;color:#57544C;">space-8 · 64px</span><div style="height:14px;width:64px;background:#7AC13B;border-radius:4px;"></div></div>
+        <div style="display:flex;align-items:center;gap:16px;"><span style="width:110px;font-size:12px;font-weight:600;color:#57544C;">space-9 · 96px</span><div style="height:14px;width:96px;background:#7AC13B;border-radius:4px;"></div></div>
+
+      </div>
+    </div>
+
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px;">
+
+      <div class="card" style="display:flex;flex-direction:column;gap:16px;">
+        <span class="section-title">Rayons</span>
+        <div style="display:flex;align-items:flex-end;gap:18px;">
+          <div style="display:flex;flex-direction:column;align-items:center;gap:8px;"><div style="width:56px;height:56px;background:#DCEFC0;border-radius:6px;"></div><span style="font-size:11px;color:#8B877D;">xs · 6</span></div>
+          <div style="display:flex;flex-direction:column;align-items:center;gap:8px;"><div style="width:56px;height:56px;background:#DCEFC0;border-radius:10px;"></div><span style="font-size:11px;color:#8B877D;">sm · 10</span></div>
+          <div style="display:flex;flex-direction:column;align-items:center;gap:8px;"><div style="width:56px;height:56px;background:#DCEFC0;border-radius:16px;"></div><span style="font-size:11px;color:#8B877D;">md · 16</span></div>
+          <div style="display:flex;flex-direction:column;align-items:center;gap:8px;"><div style="width:56px;height:56px;background:#DCEFC0;border-radius:24px;"></div><span style="font-size:11px;color:#8B877D;">lg · 24</span></div>
+          <div style="display:flex;flex-direction:column;align-items:center;gap:8px;"><div style="width:56px;height:56px;background:#DCEFC0;border-radius:999px;"></div><span style="font-size:11px;color:#8B877D;">pill</span></div>
+        </div>
+        <p style="margin:0;font-size:12px;line-height:1.5;color:#8B877D;">md/lg pour les cartes et champs · pill pour les puces de notation et étiquettes de statut, à la manière des sélecteurs à toucher unique.</p>
+      </div>
+
+      <div class="card" style="display:flex;flex-direction:column;gap:16px;">
+        <span class="section-title">Cible tactile minimale</span>
+        <div style="display:flex;align-items:center;gap:16px;">
+          <div style="width:44px;height:44px;border-radius:999px;background:#7AC13B;flex-shrink:0;"></div>
+          <span style="font-size:12px;line-height:1.5;color:#57544C;">44×44px minimum pour toute icône ou bouton actionnable — condition du parcours en 3 taps sur les téléphones d'entrée de gamme utilisés sur site.</span>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="card" style="display:flex;flex-direction:column;gap:16px;">
+      <span class="section-title">Élévation</span>
+      <div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;">
+        <div style="display:flex;flex-direction:column;gap:10px;">
+          <div style="height:64px;border-radius:16px;background:#FFFFFF;box-shadow:0 1px 2px rgba(28,27,23,0.04),0 4px 10px rgba(28,27,23,0.04);"></div>
+          <span style="font-size:12px;font-weight:600;color:#1C1B17;">e1 — carte au repos</span>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:10px;">
+          <div style="height:64px;border-radius:16px;background:#FFFFFF;box-shadow:0 2px 4px rgba(28,27,23,0.06),0 12px 24px rgba(28,27,23,0.08);"></div>
+          <span style="font-size:12px;font-weight:600;color:#1C1B17;">e2 — feuille, modale</span>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:10px;">
+          <div style="height:64px;border-radius:16px;background:#7AC13B;box-shadow:0 8px 20px rgba(95,166,44,0.28);"></div>
+          <span style="font-size:12px;font-weight:600;color:#1C1B17;">e3 — action principale flottante</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="card" style="display:flex;flex-direction:column;gap:14px;">
+      <span class="section-title">Grille — espace participant (mobile)</span>
+      <div style="display:flex;gap:16px;align-items:flex-start;">
+        <div style="width:280px;height:180px;background:#F3EFE4;border-radius:20px;padding:16px;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;">
+          <div style="background:#E4E0D6;border-radius:6px;"></div><div style="background:#E4E0D6;border-radius:6px;"></div><div style="background:#E4E0D6;border-radius:6px;"></div><div style="background:#E4E0D6;border-radius:6px;"></div>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:8px;padding-top:4px;">
+          <span style="font-size:12px;line-height:1.6;color:#57544C;">4 colonnes · marges 16px · gouttière 12px, pensée pour une largeur de 360–428px.</span>
+          <span style="font-size:12px;line-height:1.6;color:#57544C;">Tableau de bord : 12 colonnes · marges 24px, à partir de 960px.</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+</x-dc>
+</body>
+</html>

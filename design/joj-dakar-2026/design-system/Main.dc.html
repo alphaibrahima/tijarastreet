@@ -1,0 +1,157 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; }
+    body { margin: 0; }
+    .root { font-family: 'Plus Jakarta Sans', system-ui, -apple-system, 'Segoe UI', sans-serif; }
+    a { color: #457D1F; text-decoration: underline; }
+    a:hover { color: #2F5A15; }
+  </style>
+</helmet>
+
+<div class="root" style="width:1000px;min-height:1300px;background:#FAF7F0;position:relative;overflow:hidden;padding:56px 64px 64px;">
+
+  <div style="position:absolute;top:-180px;right:-160px;width:520px;height:520px;border-radius:50%;background:radial-gradient(circle, rgba(122,193,59,0.16) 0%, rgba(122,193,59,0) 70%);"></div>
+
+  <div style="position:relative;display:flex;flex-direction:column;gap:40px;">
+
+    <div style="display:flex;align-items:center;justify-content:space-between;">
+      <div style="display:flex;align-items:center;gap:10px;">
+        <div style="width:34px;height:34px;border-radius:10px;background:#1C1B17;display:flex;align-items:center;justify-content:center;">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#FAF7F0" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v4"/><path d="M5 8h14l-1.4 9.2a2 2 0 0 1-2 1.8H8.4a2 2 0 0 1-2-1.8L5 8Z"/><path d="M9 12h6"/></svg>
+        </div>
+        <span style="font-size:13px;font-weight:700;letter-spacing:0.06em;color:#1C1B17;">JOJ DAKAR 2026</span>
+      </div>
+      <div style="display:flex;gap:8px;">
+        <span style="font-size:12px;font-weight:600;color:#457D1F;background:#EFF7E1;border-radius:999px;padding:6px 14px;">Pilote — Option A</span>
+        <span style="font-size:12px;font-weight:600;color:#57544C;background:#EFEBE0;border-radius:999px;padding:6px 14px;">Brouillon v1</span>
+      </div>
+    </div>
+
+    <div style="display:flex;flex-direction:column;gap:14px;">
+      <span style="font-size:13px;font-weight:700;letter-spacing:0.08em;color:#5FA62C;text-transform:uppercase;">Système de design</span>
+      <h1 style="margin:0;font-size:44px;line-height:1.08;font-weight:800;color:#1C1B17;letter-spacing:-0.01em;">
+        Plateforme d'évaluation<br>des services aux JOJ
+      </h1>
+      <p style="margin:0;max-width:600px;font-size:16px;line-height:1.6;font-weight:500;color:#57544C;">
+        Fondations visuelles — couleurs, typographie, espacement et iconographie — pour l'espace participant,
+        le tableau de bord qualité et le portail public. Étape 1 sur 3 : ce document couvre uniquement les fondations ;
+        les composants réutilisables et les écrans suivent une fois celui-ci validé.
+      </p>
+    </div>
+
+    <div style="height:1px;background:#E4E0D6;"></div>
+
+    <div style="display:flex;flex-direction:column;gap:18px;">
+      <span style="font-size:13px;font-weight:700;letter-spacing:0.04em;color:#1C1B17;text-transform:uppercase;">Principes directeurs</span>
+      <div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;">
+
+        <div style="background:#FFFFFF;border-radius:20px;padding:22px;display:flex;flex-direction:column;gap:12px;box-shadow:0 1px 2px rgba(28,27,23,0.04),0 8px 20px rgba(28,27,23,0.05);">
+          <div style="width:40px;height:40px;border-radius:12px;background:#EFF7E1;display:flex;align-items:center;justify-content:center;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#5FA62C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l3 2"/><path d="M9 2h6"/></svg>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:4px;">
+            <span style="font-size:15px;font-weight:700;color:#1C1B17;">Rapide</span>
+            <span style="font-size:13px;line-height:1.5;color:#57544C;">Une évaluation en moins de 15 secondes, 3 taps maximum entre l'ouverture et l'envoi.</span>
+          </div>
+        </div>
+
+        <div style="background:#FFFFFF;border-radius:20px;padding:22px;display:flex;flex-direction:column;gap:12px;box-shadow:0 1px 2px rgba(28,27,23,0.04),0 8px 20px rgba(28,27,23,0.05);">
+          <div style="width:40px;height:40px;border-radius:12px;background:#FDF0C6;display:flex;align-items:center;justify-content:center;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#B8790E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3c2.5 2.5 3.8 5.7 3.8 9s-1.3 6.5-3.8 9c-2.5-2.5-3.8-5.7-3.8-9S9.5 5.5 12 3Z"/></svg>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:4px;">
+            <span style="font-size:15px;font-weight:700;color:#1C1B17;">Universel</span>
+            <span style="font-size:13px;line-height:1.5;color:#57544C;">Les icônes portent le sens : aucune barrière de langue pour noter un service.</span>
+          </div>
+        </div>
+
+        <div style="background:#FFFFFF;border-radius:20px;padding:22px;display:flex;flex-direction:column;gap:12px;box-shadow:0 1px 2px rgba(28,27,23,0.04),0 8px 20px rgba(28,27,23,0.05);">
+          <div style="width:40px;height:40px;border-radius:12px;background:#E1EEF9;display:flex;align-items:center;justify-content:center;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2E6CA6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 18a4.5 4.5 0 0 1-1-8.9A5.5 5.5 0 0 1 16.7 8 4 4 0 0 1 16 16"/><path d="M12 12v6"/><path d="m9.5 15.5 2.5 2.5 2.5-2.5"/></svg>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:4px;">
+            <span style="font-size:15px;font-weight:700;color:#1C1B17;">Fiable hors-ligne</span>
+            <span style="font-size:13px;line-height:1.5;color:#57544C;">Fonctionne sans réseau ; se synchronise seul dès que la connexion revient.</span>
+          </div>
+        </div>
+
+        <div style="background:#FFFFFF;border-radius:20px;padding:22px;display:flex;flex-direction:column;gap:12px;box-shadow:0 1px 2px rgba(28,27,23,0.04),0 8px 20px rgba(28,27,23,0.05);">
+          <div style="width:40px;height:40px;border-radius:12px;background:#FBE2E1;display:flex;align-items:center;justify-content:center;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#C43A3E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6l7-3Z"/><path d="m9 12 2 2 4-4"/></svg>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:4px;">
+            <span style="font-size:15px;font-weight:700;color:#1C1B17;">Sobre et digne</span>
+            <span style="font-size:13px;line-height:1.5;color:#57544C;">Un outil officiel : clair et chaleureux, jamais infantilisant.</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div style="height:1px;background:#E4E0D6;"></div>
+
+    <div style="display:flex;flex-direction:column;gap:18px;">
+      <span style="font-size:13px;font-weight:700;letter-spacing:0.04em;color:#1C1B17;text-transform:uppercase;">Aperçu des fondations</span>
+
+      <div style="background:#FFFFFF;border-radius:20px;padding:24px;display:flex;flex-direction:column;gap:20px;box-shadow:0 1px 2px rgba(28,27,23,0.04),0 8px 20px rgba(28,27,23,0.05);">
+
+        <div style="display:flex;flex-direction:column;gap:10px;">
+          <span style="font-size:12px;font-weight:700;color:#8B877D;text-transform:uppercase;letter-spacing:0.04em;">Couleurs →</span>
+          <div style="display:flex;gap:8px;">
+            <div style="width:36px;height:36px;border-radius:10px;background:#7AC13B;"></div>
+            <div style="width:36px;height:36px;border-radius:10px;background:#F7C948;"></div>
+            <div style="width:36px;height:36px;border-radius:10px;background:#3E82C9;"></div>
+            <div style="width:36px;height:36px;border-radius:10px;background:#E5484D;"></div>
+            <div style="width:36px;height:36px;border-radius:10px;background:#EFEBE0;"></div>
+            <div style="width:36px;height:36px;border-radius:10px;background:#1C1B17;"></div>
+          </div>
+        </div>
+
+        <div style="display:flex;flex-direction:column;gap:10px;">
+          <span style="font-size:12px;font-weight:700;color:#8B877D;text-transform:uppercase;letter-spacing:0.04em;">Typographie →</span>
+          <span style="font-family:'Plus Jakarta Sans',sans-serif;font-size:28px;font-weight:800;color:#1C1B17;">Aa — Plus Jakarta Sans</span>
+        </div>
+
+        <div style="display:flex;flex-direction:column;gap:10px;">
+          <span style="font-size:12px;font-weight:700;color:#8B877D;text-transform:uppercase;letter-spacing:0.04em;">Iconographie →</span>
+          <div style="display:flex;gap:10px;">
+            <div style="width:40px;height:40px;border-radius:999px;background:#FBE2E1;display:flex;align-items:center;justify-content:center;">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#E5484D" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><circle cx="8.7" cy="10.2" r="0.9" fill="#E5484D" stroke="none"/><circle cx="15.3" cy="10.2" r="0.9" fill="#E5484D" stroke="none"/><path d="M8 16q4-4 8 0"/></svg>
+            </div>
+            <div style="width:40px;height:40px;border-radius:999px;background:#FDF0C6;display:flex;align-items:center;justify-content:center;">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#B8790E" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><circle cx="8.7" cy="10.2" r="0.9" fill="#B8790E" stroke="none"/><circle cx="15.3" cy="10.2" r="0.9" fill="#B8790E" stroke="none"/><path d="M8 15h8"/></svg>
+            </div>
+            <div style="width:40px;height:40px;border-radius:999px;background:#E9F5DC;display:flex;align-items:center;justify-content:center;">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#5FA62C" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><circle cx="8.7" cy="10.2" r="0.9" fill="#5FA62C" stroke="none"/><circle cx="15.3" cy="10.2" r="0.9" fill="#5FA62C" stroke="none"/><path d="M8 14.5q4 3 8 0"/></svg>
+            </div>
+            <div style="width:40px;height:40px;border-radius:999px;background:#DCEFC0;display:flex;align-items:center;justify-content:center;">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#457D1F" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M7.6 9.6q1-1 2-0.1"/><path d="M14.4 9.6q1-1 2-0.1"/><path d="M7.5 14q4.5 4 9 0"/></svg>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div style="display:flex;align-items:center;justify-content:space-between;padding-top:8px;">
+      <span style="font-size:12px;color:#8B877D;">Prochaines étapes : composants réutilisables, puis écrans (participant · tableau de bord · portail public)</span>
+      <span style="font-size:12px;color:#8B877D;">30 août 2026</span>
+    </div>
+
+  </div>
+</div>
+
+</x-dc>
+</body>
+</html>

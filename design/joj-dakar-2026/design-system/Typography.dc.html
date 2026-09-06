@@ -1,0 +1,126 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; }
+    body { margin: 0; }
+    .root { font-family: 'Plus Jakarta Sans', system-ui, -apple-system, 'Segoe UI', sans-serif; }
+    a { color: #457D1F; text-decoration: underline; }
+    a:hover { color: #2F5A15; }
+    .row { display:flex; align-items:baseline; gap:28px; padding:22px 0; border-bottom:1px solid #EFEBE0; }
+    .tag { font-size:11px; font-weight:700; color:#8B877D; text-transform:uppercase; letter-spacing:0.05em; width:210px; flex-shrink:0; }
+    .meta { font-size:12px; color:#8B877D; width:170px; flex-shrink:0; }
+    .section-title { font-size:13px; font-weight:700; letter-spacing:0.04em; color:#1C1B17; text-transform:uppercase; }
+    .section-sub { font-size:13px; line-height:1.6; color:#57544C; max-width:640px; }
+  </style>
+</helmet>
+
+<div class="root" style="width:1280px;min-height:1400px;background:#FAF7F0;padding:56px 64px 64px;">
+  <div style="display:flex;flex-direction:column;gap:36px;">
+
+    <div style="display:flex;flex-direction:column;gap:10px;">
+      <span style="font-size:13px;font-weight:700;letter-spacing:0.08em;color:#5FA62C;text-transform:uppercase;">Fondations</span>
+      <h1 style="margin:0;font-size:34px;font-weight:800;color:#1C1B17;">Typographie</h1>
+      <p class="section-sub">Une seule famille — Plus Jakarta Sans — portée par ses graisses plutôt que par un second caractère. Géométrique et amicale sans être puérile ; lisible en français comme en anglais, y compris pour les petits libellés d'icônes.</p>
+    </div>
+
+    <div style="background:#FFFFFF;border-radius:20px;padding:28px 32px;box-shadow:0 1px 2px rgba(28,27,23,0.04),0 8px 20px rgba(28,27,23,0.05);">
+
+      <div class="row" style="border-top:none;padding-top:0;">
+        <span class="tag">Display / H1<br>800 · 44/48</span>
+        <span class="meta">Titres de section</span>
+        <span style="font-size:44px;line-height:1.09;font-weight:800;color:#1C1B17;letter-spacing:-0.01em;">Comment évaluez-vous ?</span>
+      </div>
+
+      <div class="row">
+        <span class="tag">H2<br>700 · 28/34</span>
+        <span class="meta">En-têtes d'écran</span>
+        <span style="font-size:28px;line-height:1.2;font-weight:700;color:#1C1B17;">Tableau de bord qualité</span>
+      </div>
+
+      <div class="row">
+        <span class="tag">H3<br>700 · 18/26</span>
+        <span class="meta">Titres de carte</span>
+        <span style="font-size:18px;line-height:1.4;font-weight:700;color:#1C1B17;">Transport — site de Dakar</span>
+      </div>
+
+      <div class="row">
+        <span class="tag">Corps L<br>500 · 16/24</span>
+        <span class="meta">Texte d'interface, boutons</span>
+        <span style="font-size:16px;line-height:1.5;font-weight:500;color:#1C1B17;">How would you rate this service today?</span>
+      </div>
+
+      <div class="row">
+        <span class="tag">Corps<br>400 · 14/20</span>
+        <span class="meta">Texte secondaire, libellés</span>
+        <span style="font-size:14px;line-height:1.5;font-weight:400;color:#57544C;">Votre évaluation est envoyée de façon anonyme au tableau de bord qualité.</span>
+      </div>
+
+      <div class="row">
+        <span class="tag">Légende<br>500 · 12/16 · +2%</span>
+        <span class="meta">Horodatage, étiquettes</span>
+        <span style="font-size:12px;line-height:1.4;font-weight:500;letter-spacing:0.02em;color:#8B877D;">ENVOYÉ IL Y A 2 MIN · SITE DE DAKAR</span>
+      </div>
+
+      <div class="row" style="border-bottom:none;">
+        <span class="tag">Chiffre statistique<br>800 · 44/48 · tabulaire</span>
+        <span class="meta">Grands nombres, tableau de bord</span>
+        <span style="font-size:44px;line-height:1;font-weight:800;color:#1C1B17;font-variant-numeric:tabular-nums;">4.6<span style="font-size:20px;font-weight:600;color:#8B877D;"> / 5</span></span>
+      </div>
+
+    </div>
+
+    <div style="height:1px;background:#E4E0D6;"></div>
+
+    <div style="display:flex;flex-direction:column;gap:18px;">
+      <span class="section-title">Bilingue par construction</span>
+      <p class="section-sub">FR et EN cohabitent au même niveau hiérarchique, jamais l'un en retrait de l'autre. Les libellés restent courts : l'icône porte le sens, le texte confirme.</p>
+      <div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;">
+        <div style="background:#FFFFFF;border-radius:18px;padding:22px;box-shadow:0 1px 2px rgba(28,27,23,0.04),0 8px 20px rgba(28,27,23,0.05);">
+          <span style="font-size:11px;font-weight:700;color:#5FA62C;letter-spacing:0.05em;">FR</span>
+          <p style="margin:6px 0 0;font-size:18px;font-weight:700;color:#1C1B17;">Merci pour votre retour.</p>
+        </div>
+        <div style="background:#FFFFFF;border-radius:18px;padding:22px;box-shadow:0 1px 2px rgba(28,27,23,0.04),0 8px 20px rgba(28,27,23,0.05);">
+          <span style="font-size:11px;font-weight:700;color:#5FA62C;letter-spacing:0.05em;">EN</span>
+          <p style="margin:6px 0 0;font-size:18px;font-weight:700;color:#1C1B17;">Thank you for your feedback.</p>
+        </div>
+      </div>
+    </div>
+
+    <div style="display:flex;flex-direction:column;gap:14px;">
+      <span class="section-title">Usage</span>
+      <div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;">
+        <div style="display:flex;gap:12px;">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#5FA62C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;margin-top:2px;"><path d="M20 6 9 17l-5-5"/></svg>
+          <span style="font-size:13px;line-height:1.5;color:#57544C;">Poids 700–800 réservé aux titres et aux chiffres clés — jamais au corps de texte.</span>
+        </div>
+        <div style="display:flex;gap:12px;">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#5FA62C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;margin-top:2px;"><path d="M20 6 9 17l-5-5"/></svg>
+          <span style="font-size:13px;line-height:1.5;color:#57544C;">14px est la taille minimale pour tout texte lu, jamais pour un libellé isolé sous une icône.</span>
+        </div>
+        <div style="display:flex;gap:12px;">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#5FA62C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;margin-top:2px;"><path d="M20 6 9 17l-5-5"/></svg>
+          <span style="font-size:13px;line-height:1.5;color:#57544C;">Chiffres en graisse tabulaire pour que les moyennes du tableau de bord ne « sautent » pas en se mettant à jour.</span>
+        </div>
+        <div style="display:flex;gap:12px;">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#5FA62C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;margin-top:2px;"><path d="M20 6 9 17l-5-5"/></svg>
+          <span style="font-size:13px;line-height:1.5;color:#57544C;">Aucune ligne de texte de formulaire n'est obligatoire (PRD 5.1) : la typographie confirme un choix, elle ne le demande jamais seule.</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+</x-dc>
+</body>
+</html>
