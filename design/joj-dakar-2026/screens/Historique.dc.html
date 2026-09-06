@@ -1,0 +1,103 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; }
+    body { margin: 0; }
+    .root { font-family: 'Plus Jakarta Sans', system-ui, -apple-system, 'Segoe UI', sans-serif; }
+    a { color: #457D1F; text-decoration: underline; }
+    a:hover { color: #2F5A15; }
+    .row { display:flex; align-items:center; gap:12px; background:#FFFFFF; border-radius:16px; padding:14px 16px; }
+  </style>
+</helmet>
+
+<div class="root" style="width:390px;height:844px;background:#FAF7F0;display:flex;flex-direction:column;overflow:hidden;">
+
+  <div style="padding:28px 20px 4px;">
+    <h1 style="margin:0;font-size:22px;font-weight:800;color:#1C1B17;">Historique</h1>
+  </div>
+
+  <div style="flex-grow:1;overflow:hidden;padding:16px 20px 0;display:flex;flex-direction:column;gap:20px;">
+
+    <div style="display:flex;flex-direction:column;gap:10px;">
+      <span style="font-size:12px;font-weight:700;color:#8B877D;text-transform:uppercase;letter-spacing:0.04em;">Aujourd'hui</span>
+
+      <div class="row">
+        <div style="width:36px;height:36px;border-radius:999px;background:#E9F5DC;display:flex;align-items:center;justify-content:center;flex-shrink:0;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#5FA62C" stroke-width="2" stroke-linecap="round"><path d="M8 14.5q4 3.2 8 0"/></svg></div>
+        <div style="flex-grow:1;display:flex;flex-direction:column;">
+          <span style="font-size:14px;font-weight:600;color:#1C1B17;">Transport — Satisfait</span>
+          <span style="font-size:11px;color:#8B877D;">09:14 · Site de Dakar</span>
+        </div>
+      </div>
+
+      <div class="row" style="background:#FBE2E1;">
+        <div style="width:36px;height:36px;border-radius:999px;background:#E5484D;display:flex;align-items:center;justify-content:center;flex-shrink:0;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 2 20h20L12 3Z"/><path d="M12 10v4"/><circle cx="12" cy="17" r="0.6" fill="#FFFFFF" stroke="none"/></svg></div>
+        <div style="flex-grow:1;display:flex;flex-direction:column;">
+          <span style="font-size:14px;font-weight:700;color:#B5292D;">Sécurité — Signalement urgent</span>
+          <span style="font-size:11px;color:#B5292D;">08:47 · Site de Dakar</span>
+        </div>
+        <span style="font-size:10px;font-weight:700;color:#B5292D;background:#FFFFFF;border-radius:999px;padding:4px 9px;flex-shrink:0;">Traité</span>
+      </div>
+    </div>
+
+    <div style="display:flex;flex-direction:column;gap:10px;">
+      <span style="font-size:12px;font-weight:700;color:#8B877D;text-transform:uppercase;letter-spacing:0.04em;">Hier</span>
+
+      <div class="row">
+        <div style="width:36px;height:36px;border-radius:999px;background:#DCEFC0;display:flex;align-items:center;justify-content:center;flex-shrink:0;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#457D1F" stroke-width="2" stroke-linecap="round"><path d="M7.6 9.6q1-1.1 2-0.1"/><path d="M14.4 9.6q1-1.1 2-0.1"/><path d="M7.5 14.2q4.5 4.3 9 0"/></svg></div>
+        <div style="flex-grow:1;display:flex;flex-direction:column;">
+          <span style="font-size:14px;font-weight:600;color:#1C1B17;">Hébergement — Très satisfait</span>
+          <span style="font-size:11px;color:#8B877D;">19:32 · Site de Dakar</span>
+        </div>
+      </div>
+
+      <div class="row">
+        <div style="width:36px;height:36px;border-radius:999px;background:#FDF0C6;display:flex;align-items:center;justify-content:center;flex-shrink:0;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#B8790E" stroke-width="2" stroke-linecap="round"><path d="M8 15h8"/></svg></div>
+        <div style="flex-grow:1;display:flex;flex-direction:column;">
+          <span style="font-size:14px;font-weight:600;color:#1C1B17;">Accueil — Moyen</span>
+          <span style="font-size:11px;color:#8B877D;">12:05 · Site de Dakar</span>
+        </div>
+      </div>
+
+      <div class="row">
+        <div style="width:36px;height:36px;border-radius:999px;background:#E9F5DC;display:flex;align-items:center;justify-content:center;flex-shrink:0;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#5FA62C" stroke-width="2" stroke-linecap="round"><path d="M8 14.5q4 3.2 8 0"/></svg></div>
+        <div style="flex-grow:1;display:flex;flex-direction:column;">
+          <span style="font-size:14px;font-weight:600;color:#1C1B17;">Transport — Satisfait</span>
+          <span style="font-size:11px;color:#8B877D;">08:50 · Site de Dakar</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div style="flex-shrink:0;display:flex;justify-content:center;padding:10px 20px 22px;border-top:1px solid #EFEBE0;background:#FFFFFF;">
+    <div style="display:flex;width:100%;max-width:320px;justify-content:space-around;">
+      <div style="display:flex;flex-direction:column;align-items:center;gap:4px;">
+        <div style="width:44px;height:32px;border-radius:12px;display:flex;align-items:center;justify-content:center;">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#8B877D" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m4 11 8-6 8 6"/><path d="M6 10v9h12v-9"/></svg>
+        </div>
+        <span style="font-size:11px;font-weight:600;color:#8B877D;">Accueil</span>
+      </div>
+      <div style="display:flex;flex-direction:column;align-items:center;gap:4px;">
+        <div style="width:44px;height:32px;border-radius:12px;background:#EFF7E1;display:flex;align-items:center;justify-content:center;">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#5FA62C" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg>
+        </div>
+        <span style="font-size:11px;font-weight:700;color:#5FA62C;">Historique</span>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+</x-dc>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; }
+    body { margin: 0; }
+    .root { font-family: 'Plus Jakarta Sans', system-ui, -apple-system, 'Segoe UI', sans-serif; }
+    a { color: #457D1F; text-decoration: underline; }
+    a:hover { color: #2F5A15; }
+  </style>
+</helmet>
+
+<div class="root" style="width:390px;height:844px;background:#FAF7F0;display:flex;flex-direction:column;overflow:hidden;">
+
+  <div style="flex-grow:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:20px;padding:32px;">
+    <div style="width:96px;height:96px;border-radius:999px;background:#DCEFC0;display:flex;align-items:center;justify-content:center;">
+      <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#457D1F" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 18a4.5 4.5 0 0 1-1-8.9A5.5 5.5 0 0 1 16.7 8 4 4 0 0 1 16 16"/><path d="m9 13.5 2 2 4-4.5"/></svg>
+    </div>
+    <div style="display:flex;flex-direction:column;align-items:center;gap:6px;text-align:center;">
+      <span style="font-size:24px;font-weight:800;color:#1C1B17;">Merci pour votre retour !</span>
+      <span style="font-size:13px;color:#8B877D;">Thank you for your feedback.</span>
+    </div>
+    <div style="background:#FFFFFF;border-radius:999px;padding:8px 16px;display:flex;align-items:center;gap:8px;">
+      <div style="width:20px;height:20px;border-radius:999px;background:#E9F5DC;display:flex;align-items:center;justify-content:center;"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#5FA62C" stroke-width="2.6" stroke-linecap="round"><path d="M8 14.5q4 3.2 8 0"/></svg></div>
+      <span style="font-size:13px;font-weight:600;color:#1C1B17;">Transport — Satisfait</span>
+      <span style="font-size:11px;color:#8B877D;">· à l'instant</span>
+    </div>
+  </div>
+
+  <div style="padding:0 32px 28px;">
+    <div style="height:1px;background:#E4E0D6;margin-bottom:20px;"></div>
+    <div style="display:flex;flex-direction:column;gap:10px;background:#E1EEF9;border-radius:16px;padding:16px;margin-bottom:20px;">
+      <div style="display:flex;align-items:center;gap:8px;">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2E6CA6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12a8 8 0 0 1 13.66-5.66"/><path d="M20 12a8 8 0 0 1-13.66 5.66"/><path d="M17 3v4h-4"/><path d="M7 21v-4h4"/></svg>
+        <span style="font-size:12px;font-weight:700;color:#2E6CA6;">Si vous êtes hors-ligne</span>
+      </div>
+      <p style="margin:0;font-size:12px;line-height:1.5;color:#3B5E78;">Votre évaluation reste enregistrée sur votre téléphone et repart automatiquement dès que le réseau revient — aucune action de votre part.</p>
+    </div>
+  </div>
+
+  <div style="flex-shrink:0;padding:0 20px 24px;">
+    <button style="all:unset;display:block;width:100%;text-align:center;background:#1C1B17;color:#FFFFFF;font-size:15px;font-weight:700;padding:16px;border-radius:999px;">Retour à l'accueil</button>
+  </div>
+
+</div>
+
+</x-dc>
+</body>
+</html>

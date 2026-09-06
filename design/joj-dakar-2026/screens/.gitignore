@@ -1,0 +1,4 @@
+# Seeded canvas output (regenerated from the .dc.html sources below via the design skill's
+# seed-canvas.mjs helper). The published, shareable version lives on the Artifact URL.
+*.html
+!*.dc.html

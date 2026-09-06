@@ -1,0 +1,66 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; }
+    body { margin: 0; }
+    .root { font-family: 'Plus Jakarta Sans', system-ui, -apple-system, 'Segoe UI', sans-serif; }
+    a { color: #457D1F; text-decoration: underline; }
+    a:hover { color: #2F5A15; }
+    .field-label { font-size:12px; font-weight:600; color:#57544C; }
+    .field { background:#F3EFE4; border-radius:12px; padding:13px 16px; font-size:14px; color:#1C1B17; font-weight:500; }
+  </style>
+</helmet>
+
+<div class="root" style="width:1440px;height:900px;background:#FAF7F0;position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center;">
+
+  <div style="position:absolute;top:-220px;left:-200px;width:600px;height:600px;border-radius:50%;background:radial-gradient(circle, rgba(122,193,59,0.14) 0%, rgba(122,193,59,0) 70%);"></div>
+
+  <div style="position:relative;width:420px;background:#FFFFFF;border-radius:24px;padding:40px 36px;display:flex;flex-direction:column;gap:28px;box-shadow:0 1px 2px rgba(28,27,23,0.04),0 24px 48px rgba(28,27,23,0.08);">
+
+    <div style="display:flex;flex-direction:column;align-items:center;gap:16px;">
+      <div style="width:44px;height:44px;border-radius:13px;background:#1C1B17;display:flex;align-items:center;justify-content:center;">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#FAF7F0" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v4"/><path d="M5 8h14l-1.4 9.2a2 2 0 0 1-2 1.8H8.4a2 2 0 0 1-2-1.8L5 8Z"/><path d="M9 12h6"/></svg>
+      </div>
+      <div style="display:flex;flex-direction:column;align-items:center;gap:4px;text-align:center;">
+        <span style="font-size:20px;font-weight:800;color:#1C1B17;">Tableau de bord qualité</span>
+        <span style="font-size:13px;color:#8B877D;">JOJ Dakar 2026 — accès réservé</span>
+      </div>
+    </div>
+
+    <div style="display:flex;flex-direction:column;gap:14px;">
+      <div style="display:flex;flex-direction:column;gap:6px;">
+        <span class="field-label">Adresse e-mail</span>
+        <div class="field" style="color:#8B877D;">nom.prenom@joj2026.sn</div>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:6px;">
+        <span class="field-label">Mot de passe</span>
+        <div class="field" style="color:#8B877D;letter-spacing:2px;">••••••••••</div>
+      </div>
+    </div>
+
+    <button style="all:unset;width:100%;text-align:center;background:#1C1B17;color:#FFFFFF;font-size:15px;font-weight:700;padding:15px;border-radius:999px;">Se connecter</button>
+
+    <div style="height:1px;background:#E4E0D6;"></div>
+
+    <div style="display:flex;gap:10px;">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#8B877D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;margin-top:1px;"><rect x="5" y="10" width="14" height="9" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>
+      <span style="font-size:11px;line-height:1.5;color:#8B877D;">L'accès aux données nominatives est restreint et soumis à autorisation de l'équipe gouvernance.</span>
+    </div>
+
+  </div>
+
+</div>
+
+</x-dc>
+</body>
+</html>

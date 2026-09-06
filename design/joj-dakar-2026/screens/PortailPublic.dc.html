@@ -1,0 +1,94 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; }
+    body { margin: 0; }
+    .root { font-family: 'Plus Jakarta Sans', system-ui, -apple-system, 'Segoe UI', sans-serif; }
+    a { color: #457D1F; text-decoration: underline; }
+    a:hover { color: #2F5A15; }
+    .card { background:#FFFFFF; border-radius:20px; box-shadow:0 1px 2px rgba(28,27,23,0.04),0 8px 20px rgba(28,27,23,0.05); }
+  </style>
+</helmet>
+
+<div class="root" style="width:1440px;min-height:1100px;background:#FAF7F0;display:flex;flex-direction:column;">
+
+  <div style="flex-shrink:0;background:#FFFFFF;border-bottom:1px solid #EFEBE0;padding:20px 40px;display:flex;align-items:center;justify-content:space-between;">
+    <div style="display:flex;align-items:center;gap:10px;">
+      <div style="width:32px;height:32px;border-radius:9px;background:#1C1B17;display:flex;align-items:center;justify-content:center;">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#FAF7F0" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v4"/><path d="M5 8h14l-1.4 9.2a2 2 0 0 1-2 1.8H8.4a2 2 0 0 1-2-1.8L5 8Z"/><path d="M9 12h6"/></svg>
+      </div>
+      <span style="font-size:14px;font-weight:700;color:#1C1B17;">JOJ Dakar 2026</span>
+    </div>
+    <span style="font-size:13px;font-weight:600;color:#57544C;">Portail de données ouvertes</span>
+  </div>
+
+  <div style="padding:64px 40px 80px;display:flex;justify-content:center;">
+    <div style="width:1120px;display:flex;flex-direction:column;gap:40px;">
+
+      <div style="display:flex;flex-direction:column;gap:12px;max-width:720px;">
+        <span style="font-size:13px;font-weight:700;letter-spacing:0.06em;color:#5FA62C;text-transform:uppercase;">Qualité des services — données agrégées</span>
+        <h1 style="margin:0;font-size:38px;font-weight:800;color:#1C1B17;line-height:1.1;">La qualité des services perçue par les participants, en un coup d'œil.</h1>
+        <p style="margin:0;font-size:15px;line-height:1.6;color:#57544C;">Moyennes calculées sur l'ensemble des évaluations reçues durant le pilote, site de [Dakar]. Données strictement agrégées par service et par site — aucune donnée nominative, aucune ventilation par nationalité ou délégation.</p>
+      </div>
+
+      <div class="card" style="padding:36px 40px;display:flex;flex-direction:column;gap:28px;">
+        <div style="display:flex;align-items:center;justify-content:space-between;">
+          <span style="font-size:15px;font-weight:700;color:#1C1B17;">Note moyenne par service</span>
+          <span style="font-size:12px;color:#8B877D;">Sur 5 · pilote en cours</span>
+        </div>
+
+        <svg width="100%" height="260" viewBox="0 0 960 260">
+          <line x1="0" y1="220" x2="960" y2="220" stroke="#E4E0D6" stroke-width="1"/>
+
+          <rect x="60" y="48" width="140" height="172" rx="10" fill="#7AC13B"/>
+          <text x="130" y="34" text-anchor="middle" font-family="'Plus Jakarta Sans',sans-serif" font-size="16" font-weight="800" fill="#1C1B17">4.3</text>
+          <text x="130" y="246" text-anchor="middle" font-family="'Plus Jakarta Sans',sans-serif" font-size="13" font-weight="600" fill="#57544C">Transport</text>
+
+          <rect x="290" y="36" width="140" height="184" rx="10" fill="#7AC13B"/>
+          <text x="360" y="22" text-anchor="middle" font-family="'Plus Jakarta Sans',sans-serif" font-size="16" font-weight="800" fill="#1C1B17">4.6</text>
+          <text x="360" y="246" text-anchor="middle" font-family="'Plus Jakarta Sans',sans-serif" font-size="13" font-weight="600" fill="#57544C">Hébergement</text>
+
+          <rect x="520" y="68" width="140" height="152" rx="10" fill="#7AC13B"/>
+          <text x="590" y="54" text-anchor="middle" font-family="'Plus Jakarta Sans',sans-serif" font-size="16" font-weight="800" fill="#1C1B17">3.8</text>
+          <text x="590" y="246" text-anchor="middle" font-family="'Plus Jakarta Sans',sans-serif" font-size="13" font-weight="600" fill="#57544C">Accueil</text>
+
+          <rect x="750" y="32" width="140" height="188" rx="10" fill="#7AC13B"/>
+          <text x="820" y="18" text-anchor="middle" font-family="'Plus Jakarta Sans',sans-serif" font-size="16" font-weight="800" fill="#1C1B17">4.7</text>
+          <text x="820" y="246" text-anchor="middle" font-family="'Plus Jakarta Sans',sans-serif" font-size="13" font-weight="600" fill="#57544C">Sécurité</text>
+        </svg>
+      </div>
+
+      <div class="card" style="padding:28px 32px;display:flex;align-items:center;gap:20px;">
+        <div style="width:48px;height:48px;border-radius:14px;background:#EFF7E1;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#457D1F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v13"/><path d="m7 12 5 5 5-5"/><path d="M5 20h14"/></svg>
+        </div>
+        <div style="flex-grow:1;display:flex;flex-direction:column;gap:2px;">
+          <span style="font-size:15px;font-weight:700;color:#1C1B17;">Télécharger les données agrégées</span>
+          <span style="font-size:12px;color:#8B877D;">Format CSV · moyennes par service et par site uniquement</span>
+        </div>
+        <span style="font-size:14px;font-weight:700;color:#FFFFFF;background:#457D1F;border-radius:999px;padding:13px 26px;flex-shrink:0;">Télécharger le CSV</span>
+      </div>
+
+      <div style="display:flex;gap:10px;padding:0 4px;">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#8B877D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;margin-top:1px;"><circle cx="12" cy="12" r="9"/><path d="M12 8v5"/><circle cx="12" cy="16.3" r="0.6" fill="#8B877D" stroke="none"/></svg>
+        <span style="font-size:12px;line-height:1.6;color:#8B877D;">Méthodologie : agrégation systématique par catégorie de service et par site pilote — jamais par nationalité ou délégation, pour préserver la confidentialité des participants.</span>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+
+</x-dc>
+</body>
+</html>
