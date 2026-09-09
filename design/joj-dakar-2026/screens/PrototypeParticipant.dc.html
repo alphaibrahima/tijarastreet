@@ -1,0 +1,422 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; }
+    body { margin: 0; }
+    .root { font-family: 'Plus Jakarta Sans', system-ui, -apple-system, 'Segoe UI', sans-serif; }
+    a { color: #457D1F; text-decoration: underline; }
+    a:hover { color: #2F5A15; }
+    .screen { width:390px; height:844px; background:#FAF7F0; display:flex; flex-direction:column; overflow:hidden; }
+    .chip { font-size:13px; font-weight:600; padding:10px 16px; border-radius:999px; cursor:pointer; }
+  </style>
+</helmet>
+
+<div style="width:390px;height:844px;position:relative;">
+
+  <sc-if value="{{isBienvenue}}" hint-placeholder-val="{{true}}">
+  <div class="screen" style="position:relative;">
+    <div style="position:absolute;top:-160px;right:-140px;width:420px;height:420px;border-radius:50%;background:radial-gradient(circle, rgba(122,193,59,0.16) 0%, rgba(122,193,59,0) 70%);"></div>
+    <div style="position:relative;flex-shrink:0;padding:24px 20px 0;display:flex;justify-content:flex-end;">
+      <div style="display:flex;background:#EFEBE0;border-radius:999px;padding:3px;">
+        <span style="font-size:11px;font-weight:700;color:#FFFFFF;background:#1C1B17;border-radius:999px;padding:5px 10px;">FR</span>
+        <span style="font-size:11px;font-weight:700;color:#8B877D;padding:5px 10px;">EN</span>
+      </div>
+    </div>
+    <div style="position:relative;flex-grow:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:28px;padding:32px;text-align:center;">
+      <div style="width:64px;height:64px;border-radius:19px;background:#1C1B17;display:flex;align-items:center;justify-content:center;">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#FAF7F0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v4"/><path d="M5 8h14l-1.4 9.2a2 2 0 0 1-2 1.8H8.4a2 2 0 0 1-2-1.8L5 8Z"/><path d="M9 12h6"/></svg>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:10px;">
+        <span style="font-size:13px;font-weight:700;letter-spacing:0.06em;color:#5FA62C;text-transform:uppercase;">JOJ Dakar 2026</span>
+        <h1 style="margin:0;font-size:28px;font-weight:800;color:#1C1B17;line-height:1.2;">Votre avis compte, en quelques secondes.</h1>
+        <p style="margin:0;font-size:14px;line-height:1.6;color:#57544C;">Notez les services que vous utilisez pendant les Jeux avec des icônes simples — pas de texte à écrire, pas de compte à créer.</p>
+      </div>
+      <div style="display:flex;gap:14px;">
+        <div style="width:52px;height:52px;border-radius:999px;background:#E9F5DC;display:flex;align-items:center;justify-content:center;"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#5FA62C" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M8 14.5q4 3.2 8 0"/></svg></div>
+        <div style="width:52px;height:52px;border-radius:999px;background:#DCEFC0;display:flex;align-items:center;justify-content:center;"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#457D1F" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M7.6 9.6q1-1.1 2-0.1"/><path d="M14.4 9.6q1-1.1 2-0.1"/><path d="M7.5 14.2q4.5 4.3 9 0"/></svg></div>
+        <div style="width:52px;height:52px;border-radius:999px;background:#FBE2E1;display:flex;align-items:center;justify-content:center;"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#E5484D" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M8 16.5q4-4.5 8 0"/></svg></div>
+      </div>
+    </div>
+    <div style="position:relative;flex-shrink:0;padding:0 24px 28px;display:flex;flex-direction:column;align-items:center;gap:14px;">
+      <button onClick="{{goProfil}}" style="all:unset;cursor:pointer;width:100%;text-align:center;background:#7AC13B;color:#FFFFFF;font-size:16px;font-weight:700;padding:17px;border-radius:999px;box-shadow:0 8px 20px rgba(95,166,44,0.28);">Commencer</button>
+      <div style="display:flex;gap:8px;align-items:center;">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#8B877D" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="10" width="14" height="9" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>
+        <span style="font-size:11px;color:#8B877D;">Vos données restent confidentielles.</span>
+      </div>
+    </div>
+  </div>
+  </sc-if>
+
+  <sc-if value="{{isProfil}}" hint-placeholder-val="{{true}}">
+  <div class="screen">
+    <div style="flex-grow:1;overflow:hidden;padding:36px 24px 0;display:flex;flex-direction:column;gap:24px;">
+      <div style="display:flex;flex-direction:column;gap:6px;">
+        <span style="font-size:13px;font-weight:700;letter-spacing:0.06em;color:#5FA62C;text-transform:uppercase;">Bienvenue</span>
+        <h1 style="margin:0;font-size:26px;font-weight:800;color:#1C1B17;line-height:1.15;">Créons votre profil</h1>
+        <p style="margin:0;font-size:13px;line-height:1.5;color:#57544C;">30 secondes, une seule fois — vous ne le referez plus.</p>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:14px;">
+        <div style="display:flex;gap:10px;">
+          <div style="flex:1;display:flex;flex-direction:column;gap:6px;"><span style="font-size:12px;font-weight:600;color:#57544C;">Prénom</span><div style="background:#F3EFE4;border-radius:14px;padding:14px 16px;font-size:15px;color:#1C1B17;font-weight:500;">Fatou</div></div>
+          <div style="flex:1;display:flex;flex-direction:column;gap:6px;"><span style="font-size:12px;font-weight:600;color:#57544C;">Nom</span><div style="background:#F3EFE4;border-radius:14px;padding:14px 16px;font-size:15px;color:#1C1B17;font-weight:500;">Diop</div></div>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:6px;">
+          <span style="font-size:12px;font-weight:600;color:#57544C;">Nationalité</span>
+          <div style="background:#F3EFE4;border-radius:14px;padding:14px 16px;font-size:15px;color:#1C1B17;font-weight:500;display:flex;align-items:center;justify-content:space-between;">
+            <div style="display:flex;align-items:center;gap:8px;">
+              <svg width="20" height="14" viewBox="0 0 20 14" style="border-radius:2px;flex-shrink:0;"><rect width="20" height="14" fill="#F7C948"/><rect width="6.66" height="14" fill="#457D1F"/><rect x="13.34" width="6.66" height="14" fill="#E5484D"/></svg>
+              <span>Sénégal</span>
+            </div>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#8B877D" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+          </div>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:6px;"><span style="font-size:12px;font-weight:600;color:#57544C;">Délégation</span><div style="background:#F3EFE4;border-radius:14px;padding:14px 16px;font-size:15px;color:#8B877D;font-weight:500;display:flex;align-items:center;justify-content:space-between;"><span>Sélectionner votre délégation</span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#8B877D" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></div></div>
+        <div style="display:flex;flex-direction:column;gap:6px;"><span style="font-size:12px;font-weight:600;color:#57544C;">Spécialité</span><div style="background:#F3EFE4;border-radius:14px;padding:14px 16px;font-size:15px;color:#8B877D;font-weight:500;display:flex;align-items:center;justify-content:space-between;"><span>Sélectionner votre spécialité</span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#8B877D" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></div></div>
+      </div>
+      <div style="display:flex;gap:10px;background:#F3EFE4;border-radius:14px;padding:14px 16px;">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#57544C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;margin-top:1px;"><rect x="5" y="10" width="14" height="9" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>
+        <span style="font-size:12px;line-height:1.5;color:#57544C;">Vos informations restent confidentielles. Seules des moyennes anonymes sont partagées publiquement.</span>
+      </div>
+    </div>
+    <div style="flex-shrink:0;padding:16px 24px 24px;display:flex;flex-direction:column;align-items:center;gap:14px;">
+      <button onClick="{{goAccueil}}" style="all:unset;cursor:pointer;width:100%;text-align:center;background:#7AC13B;color:#FFFFFF;font-size:16px;font-weight:700;padding:17px;border-radius:999px;box-shadow:0 8px 20px rgba(95,166,44,0.28);">Continuer</button>
+    </div>
+  </div>
+  </sc-if>
+
+  <sc-if value="{{isAccueil}}" hint-placeholder-val="{{true}}">
+  <div class="screen">
+    <div style="padding:28px 20px 8px;display:flex;flex-direction:column;gap:20px;">
+      <div style="display:flex;align-items:center;justify-content:space-between;">
+        <div style="display:flex;align-items:center;gap:8px;">
+          <div style="width:28px;height:28px;border-radius:8px;background:#1C1B17;display:flex;align-items:center;justify-content:center;"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#FAF7F0" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v4"/><path d="M5 8h14l-1.4 9.2a2 2 0 0 1-2 1.8H8.4a2 2 0 0 1-2-1.8L5 8Z"/><path d="M9 12h6"/></svg></div>
+          <span style="font-size:12px;font-weight:700;letter-spacing:0.04em;color:#1C1B17;">JOJ DAKAR 2026</span>
+        </div>
+        <div style="width:36px;height:36px;border-radius:999px;background:#DCEFC0;display:flex;align-items:center;justify-content:center;"><span style="font-size:13px;font-weight:700;color:#457D1F;">FD</span></div>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:4px;">
+        <h1 style="margin:0;font-size:26px;font-weight:800;color:#1C1B17;">Bonjour, Fatou</h1>
+        <p style="margin:0;font-size:14px;color:#57544C;">Comment se passent vos JOJ aujourd'hui ?</p>
+      </div>
+      <div onClick="{{goSignalement}}" style="cursor:pointer;display:flex;align-items:center;gap:12px;background:#FBE2E1;border-radius:16px;padding:14px 16px;">
+        <div style="width:36px;height:36px;border-radius:999px;background:#E5484D;display:flex;align-items:center;justify-content:center;flex-shrink:0;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 2 20h20L12 3Z"/><path d="M12 10v4"/><circle cx="12" cy="17" r="0.6" fill="#FFFFFF" stroke="none"/></svg></div>
+        <span style="font-size:14px;font-weight:700;color:#B5292D;flex-grow:1;">Signaler un problème urgent</span>
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#B5292D" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 6 6 6-6 6"/></svg>
+      </div>
+    </div>
+    <div style="flex-grow:1;overflow:hidden;padding:12px 20px 0;display:flex;flex-direction:column;gap:14px;">
+      <span style="font-size:12px;font-weight:700;color:#8B877D;text-transform:uppercase;letter-spacing:0.04em;">Noter un service</span>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;">
+
+        <div onClick="{{goNotationTransport}}" style="cursor:pointer;background:#FFFFFF;border-radius:20px;padding:18px;display:flex;flex-direction:column;gap:14px;box-shadow:0 1px 2px rgba(28,27,23,0.04),0 8px 20px rgba(28,27,23,0.05);">
+          <div style="width:44px;height:44px;border-radius:14px;background:#F3EFE4;display:flex;align-items:center;justify-content:center;"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1C1B17" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="6" width="16" height="10" rx="3"/><path d="M4 12h16"/><circle cx="8" cy="18.5" r="1.4"/><circle cx="16" cy="18.5" r="1.4"/></svg></div>
+          <span style="font-size:15px;font-weight:700;color:#1C1B17;">Transport</span>
+        </div>
+
+        <div onClick="{{goNotationHebergement}}" style="cursor:pointer;background:#FFFFFF;border-radius:20px;padding:18px;display:flex;flex-direction:column;gap:14px;box-shadow:0 1px 2px rgba(28,27,23,0.04),0 8px 20px rgba(28,27,23,0.05);">
+          <div style="width:44px;height:44px;border-radius:14px;background:#F3EFE4;display:flex;align-items:center;justify-content:center;"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1C1B17" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 19v-7a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v7"/><path d="M3 19h18"/><path d="M5 10V7a2 2 0 0 1 2-2h3"/><path d="M9 12.5h4"/></svg></div>
+          <span style="font-size:15px;font-weight:700;color:#1C1B17;">Hébergement</span>
+        </div>
+
+        <div onClick="{{goNotationAccueilCat}}" style="cursor:pointer;background:#FFFFFF;border-radius:20px;padding:18px;display:flex;flex-direction:column;gap:14px;box-shadow:0 1px 2px rgba(28,27,23,0.04),0 8px 20px rgba(28,27,23,0.05);">
+          <div style="width:44px;height:44px;border-radius:14px;background:#F3EFE4;display:flex;align-items:center;justify-content:center;"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1C1B17" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 12a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7Z"/><path d="M3.5 19c0-3 2-5 4.5-5s4.5 2 4.5 5"/><path d="M15 8.5c1.2.4 2 1.5 2 2.8s-.8 2.4-2 2.8"/><path d="M16 19c0-2.3-1.2-4.2-3-5"/></svg></div>
+          <span style="font-size:15px;font-weight:700;color:#1C1B17;">Accueil</span>
+        </div>
+
+        <div onClick="{{goNotationSecurite}}" style="cursor:pointer;background:#FFFFFF;border-radius:20px;padding:18px;display:flex;flex-direction:column;gap:14px;box-shadow:0 1px 2px rgba(28,27,23,0.04),0 8px 20px rgba(28,27,23,0.05);">
+          <div style="width:44px;height:44px;border-radius:14px;background:#F3EFE4;display:flex;align-items:center;justify-content:center;"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1C1B17" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6l7-3Z"/><path d="m9 12 2 2 4-4"/></svg></div>
+          <span style="font-size:15px;font-weight:700;color:#1C1B17;">Sécurité</span>
+        </div>
+
+      </div>
+    </div>
+    <div style="flex-shrink:0;display:flex;justify-content:center;padding:10px 20px 22px;border-top:1px solid #EFEBE0;background:#FFFFFF;">
+      <div style="display:flex;width:100%;max-width:320px;justify-content:space-around;">
+        <div onClick="{{goAccueil}}" style="cursor:pointer;display:flex;flex-direction:column;align-items:center;gap:4px;">
+          <div style="width:44px;height:44px;border-radius:14px;background:#EFF7E1;display:flex;align-items:center;justify-content:center;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#5FA62C" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m4 11 8-6 8 6"/><path d="M6 10v9h12v-9"/></svg></div>
+          <span style="font-size:11px;font-weight:700;color:#5FA62C;">Accueil</span>
+        </div>
+        <div onClick="{{goHistorique}}" style="cursor:pointer;display:flex;flex-direction:column;align-items:center;gap:4px;">
+          <div style="width:44px;height:44px;border-radius:14px;display:flex;align-items:center;justify-content:center;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#8B877D" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg></div>
+          <span style="font-size:11px;font-weight:600;color:#8B877D;">Historique</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  </sc-if>
+
+  <sc-if value="{{isNotation}}" hint-placeholder-val="{{true}}">
+  <div class="screen">
+    <div style="padding:28px 20px 0;display:flex;align-items:center;gap:14px;">
+      <div onClick="{{goAccueilReset}}" style="cursor:pointer;width:36px;height:36px;border-radius:999px;background:#FFFFFF;display:flex;align-items:center;justify-content:center;box-shadow:0 1px 2px rgba(28,27,23,0.06);"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1C1B17" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 6-6 6 6 6"/></svg></div>
+      <div style="display:flex;flex-direction:column;">
+        <span style="font-size:16px;font-weight:700;color:#1C1B17;">{{categoryName}}</span>
+        <span style="font-size:12px;color:#8B877D;">Site de Dakar</span>
+      </div>
+    </div>
+    <div style="flex-grow:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:36px;padding:20px;">
+      <div style="display:flex;flex-direction:column;align-items:center;gap:20px;">
+        <div style="width:88px;height:88px;border-radius:999px;background:#EFF7E1;display:flex;align-items:center;justify-content:center;">
+          <sc-if value="{{isTransport}}" hint-placeholder-val="{{true}}"><svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="#5FA62C" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="6" width="16" height="10" rx="3"/><path d="M4 12h16"/><circle cx="8" cy="18.5" r="1.4"/><circle cx="16" cy="18.5" r="1.4"/></svg></sc-if>
+          <sc-if value="{{isHebergement}}" hint-placeholder-val="{{false}}"><svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="#5FA62C" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 19v-7a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v7"/><path d="M3 19h18"/><path d="M5 10V7a2 2 0 0 1 2-2h3"/><path d="M9 12.5h4"/></svg></sc-if>
+          <sc-if value="{{isAccueilCat}}" hint-placeholder-val="{{false}}"><svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="#5FA62C" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M8 12a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7Z"/><path d="M3.5 19c0-3 2-5 4.5-5s4.5 2 4.5 5"/><path d="M15 8.5c1.2.4 2 1.5 2 2.8s-.8 2.4-2 2.8"/><path d="M16 19c0-2.3-1.2-4.2-3-5"/></svg></sc-if>
+          <sc-if value="{{isSecurite}}" hint-placeholder-val="{{false}}"><svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="#5FA62C" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6l7-3Z"/><path d="m9 12 2 2 4-4"/></svg></sc-if>
+        </div>
+        <div style="display:flex;flex-direction:column;align-items:center;gap:4px;text-align:center;">
+          <span style="font-size:20px;font-weight:800;color:#1C1B17;">Comment évaluez-vous ce service ?</span>
+          <span style="font-size:13px;color:#8B877D;">How would you rate this service?</span>
+        </div>
+      </div>
+      <div style="display:flex;gap:14px;">
+        <div onClick="{{pickInsatisfait}}" style="cursor:pointer;display:flex;flex-direction:column;align-items:center;gap:8px;">
+          <div style="width:64px;height:64px;border-radius:999px;background:#FBE2E1;display:flex;align-items:center;justify-content:center;transform:{{scaleInsatisfait}};box-shadow:{{ringInsatisfait}};"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#E5484D" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><circle cx="8.7" cy="10.2" r="1" fill="#E5484D" stroke="none"/><circle cx="15.3" cy="10.2" r="1" fill="#E5484D" stroke="none"/><path d="M8 16.5q4-4.5 8 0"/></svg></div>
+          <span style="font-size:11px;font-weight:600;color:#57544C;">Insatisfait</span>
+        </div>
+        <div onClick="{{pickMoyen}}" style="cursor:pointer;display:flex;flex-direction:column;align-items:center;gap:8px;">
+          <div style="width:64px;height:64px;border-radius:999px;background:#FDF0C6;display:flex;align-items:center;justify-content:center;transform:{{scaleMoyen}};box-shadow:{{ringMoyen}};"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#B8790E" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><circle cx="8.7" cy="10.2" r="1" fill="#B8790E" stroke="none"/><circle cx="15.3" cy="10.2" r="1" fill="#B8790E" stroke="none"/><path d="M8 15h8"/></svg></div>
+          <span style="font-size:11px;font-weight:600;color:#57544C;">Moyen</span>
+        </div>
+        <div onClick="{{pickSatisfait}}" style="cursor:pointer;display:flex;flex-direction:column;align-items:center;gap:8px;">
+          <div style="width:64px;height:64px;border-radius:999px;background:#E9F5DC;display:flex;align-items:center;justify-content:center;transform:{{scaleSatisfait}};box-shadow:{{ringSatisfait}};"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#5FA62C" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><circle cx="8.7" cy="10.2" r="1" fill="#5FA62C" stroke="none"/><circle cx="15.3" cy="10.2" r="1" fill="#5FA62C" stroke="none"/><path d="M8 14.5q4 3.2 8 0"/></svg></div>
+          <span style="font-size:11px;font-weight:600;color:#57544C;">Satisfait</span>
+        </div>
+        <div onClick="{{pickTres}}" style="cursor:pointer;display:flex;flex-direction:column;align-items:center;gap:8px;">
+          <div style="width:64px;height:64px;border-radius:999px;background:#DCEFC0;display:flex;align-items:center;justify-content:center;transform:{{scaleTres}};box-shadow:{{ringTres}};"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#457D1F" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M7.6 9.6q1-1.1 2-0.1"/><path d="M14.4 9.6q1-1.1 2-0.1"/><path d="M7.5 14.2q4.5 4.3 9 0"/></svg></div>
+          <span style="font-size:11px;font-weight:600;color:#57544C;">Très satisfait</span>
+        </div>
+      </div>
+    </div>
+    <div style="flex-shrink:0;padding:0 20px 20px;display:flex;flex-direction:column;align-items:center;gap:16px;">
+      <button onClick="{{send}}" style="all:unset;cursor:pointer;width:100%;text-align:center;background:{{sendBg}};color:#FFFFFF;font-size:16px;font-weight:700;padding:17px;border-radius:999px;box-shadow:0 8px 20px rgba(95,166,44,0.28);">Envoyer</button>
+      <span style="font-size:11px;color:#8B877D;text-align:center;">Envoyé en moins de 2 secondes, même hors connexion.</span>
+      <a onClick="{{goSignalement}}" style="cursor:pointer;font-size:12px;font-weight:600;color:#B5292D;text-decoration:none;">Un problème urgent plutôt ? Signaler</a>
+    </div>
+  </div>
+  </sc-if>
+
+  <sc-if value="{{isConfirmation}}" hint-placeholder-val="{{false}}">
+  <div class="screen">
+    <div style="flex-grow:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:20px;padding:32px;">
+      <div style="width:96px;height:96px;border-radius:999px;background:#DCEFC0;display:flex;align-items:center;justify-content:center;"><svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#457D1F" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 18a4.5 4.5 0 0 1-1-8.9A5.5 5.5 0 0 1 16.7 8 4 4 0 0 1 16 16"/><path d="m9 13.5 2 2 4-4.5"/></svg></div>
+      <div style="display:flex;flex-direction:column;align-items:center;gap:6px;text-align:center;">
+        <span style="font-size:24px;font-weight:800;color:#1C1B17;">Merci pour votre retour !</span>
+        <span style="font-size:13px;color:#8B877D;">Thank you for your feedback.</span>
+      </div>
+      <div style="background:#FFFFFF;border-radius:999px;padding:8px 16px;display:flex;align-items:center;gap:8px;">
+        <div style="width:20px;height:20px;border-radius:999px;background:#E9F5DC;display:flex;align-items:center;justify-content:center;"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#5FA62C" stroke-width="2.6" stroke-linecap="round"><path d="M8 14.5q4 3.2 8 0"/></svg></div>
+        <span style="font-size:13px;font-weight:600;color:#1C1B17;">{{categoryName}} — {{ratingLabel}}</span>
+        <span style="font-size:11px;color:#8B877D;">· à l'instant</span>
+      </div>
+    </div>
+    <div style="padding:0 32px 28px;">
+      <div style="height:1px;background:#E4E0D6;margin-bottom:20px;"></div>
+      <div style="display:flex;flex-direction:column;gap:10px;background:#E1EEF9;border-radius:16px;padding:16px;margin-bottom:20px;">
+        <div style="display:flex;align-items:center;gap:8px;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2E6CA6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12a8 8 0 0 1 13.66-5.66"/><path d="M20 12a8 8 0 0 1-13.66 5.66"/><path d="M17 3v4h-4"/><path d="M7 21v-4h4"/></svg><span style="font-size:12px;font-weight:700;color:#2E6CA6;">Si vous êtes hors-ligne</span></div>
+        <p style="margin:0;font-size:12px;line-height:1.5;color:#2E6CA6;">Votre évaluation reste enregistrée sur votre téléphone et repart automatiquement dès que le réseau revient — aucune action de votre part.</p>
+      </div>
+    </div>
+    <div style="flex-shrink:0;padding:0 20px 24px;">
+      <button onClick="{{goAccueilReset}}" style="all:unset;cursor:pointer;display:block;width:100%;text-align:center;background:#1C1B17;color:#FFFFFF;font-size:15px;font-weight:700;padding:16px;border-radius:999px;">Retour à l'accueil</button>
+    </div>
+  </div>
+  </sc-if>
+
+  <sc-if value="{{isSignalement}}" hint-placeholder-val="{{false}}">
+  <div class="screen">
+    <div style="padding:28px 20px 0;display:flex;align-items:center;gap:14px;">
+      <div onClick="{{goAccueilReset}}" style="cursor:pointer;width:36px;height:36px;border-radius:999px;background:#FFFFFF;display:flex;align-items:center;justify-content:center;box-shadow:0 1px 2px rgba(28,27,23,0.06);"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1C1B17" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 6-6 6 6 6"/></svg></div>
+      <span style="font-size:16px;font-weight:700;color:#1C1B17;">Signalement urgent</span>
+    </div>
+    <div style="flex-grow:1;overflow:hidden;padding:24px 20px 0;display:flex;flex-direction:column;gap:24px;">
+      <div style="display:flex;flex-direction:column;align-items:center;gap:14px;text-align:center;">
+        <div style="width:64px;height:64px;border-radius:999px;background:#FBE2E1;display:flex;align-items:center;justify-content:center;"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#E5484D" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 2 20h20L12 3Z"/><path d="M12 10v4"/><circle cx="12" cy="17" r="0.6" fill="#E5484D" stroke="none"/></svg></div>
+        <div style="display:flex;flex-direction:column;gap:4px;"><span style="font-size:19px;font-weight:800;color:#1C1B17;">Décrivez le problème</span><span style="font-size:12px;color:#8B877D;">Transmis immédiatement à l'équipe sécurité.</span></div>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:10px;">
+        <span style="font-size:12px;font-weight:700;color:#57544C;">Catégorie concernée</span>
+        <div style="display:flex;flex-wrap:wrap;gap:8px;">
+          <span onClick="{{pickTransportChip}}" class="chip" style="background:{{bgTransportChip}};color:{{colorTransportChip}};box-shadow:{{ringTransportChip}};">Transport</span>
+          <span onClick="{{pickHebergementChip}}" class="chip" style="background:{{bgHebergementChip}};color:{{colorHebergementChip}};box-shadow:{{ringHebergementChip}};">Hébergement</span>
+          <span onClick="{{pickAccueilChip}}" class="chip" style="background:{{bgAccueilChip}};color:{{colorAccueilChip}};box-shadow:{{ringAccueilChip}};">Accueil</span>
+          <span onClick="{{pickSecuriteChip}}" class="chip" style="background:{{bgSecuriteChip}};color:{{colorSecuriteChip}};box-shadow:{{ringSecuriteChip}};">Sécurité</span>
+          <span onClick="{{pickAutreChip}}" class="chip" style="background:{{bgAutreChip}};color:{{colorAutreChip}};box-shadow:{{ringAutreChip}};">Autre</span>
+        </div>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:10px;">
+        <span style="font-size:12px;font-weight:700;color:#57544C;">Précision (optionnel)</span>
+        <div style="background:#F3EFE4;border-radius:16px;padding:14px 16px;min-height:96px;font-size:14px;line-height:1.5;color:#8B877D;">Portail d'accès mal éclairé côté livraisons...</div>
+      </div>
+    </div>
+    <div style="flex-shrink:0;padding:0 20px 22px;display:flex;flex-direction:column;align-items:center;gap:12px;">
+      <button onClick="{{sendUrgent}}" style="all:unset;cursor:pointer;width:100%;text-align:center;background:{{sendUrgentBg}};color:#FFFFFF;font-size:16px;font-weight:700;padding:17px;border-radius:999px;box-shadow:0 8px 20px rgba(229,72,77,0.28);">Envoyer le signalement</button>
+      <span style="font-size:11px;color:#8B877D;text-align:center;">Traité en priorité par l'équipe sécurité, même hors connexion.</span>
+    </div>
+  </div>
+  </sc-if>
+
+  <sc-if value="{{isConfirmationUrgent}}" hint-placeholder-val="{{false}}">
+  <div class="screen">
+    <div style="flex-grow:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:20px;padding:32px;">
+      <div style="width:96px;height:96px;border-radius:999px;background:#1C1B17;display:flex;align-items:center;justify-content:center;"><svg width="46" height="46" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6l7-3Z"/><path d="m9 12 2 2 4-4"/></svg></div>
+      <div style="display:flex;flex-direction:column;align-items:center;gap:6px;text-align:center;">
+        <span style="font-size:24px;font-weight:800;color:#1C1B17;">Signalement transmis</span>
+        <span style="font-size:13px;color:#8B877D;">Report submitted to the security team.</span>
+      </div>
+      <div style="background:#FBE2E1;border-radius:999px;padding:8px 16px;display:flex;align-items:center;gap:8px;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#B5292D" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 2 20h20L12 3Z"/><path d="M12 10v4"/><circle cx="12" cy="17" r="0.6" fill="#B5292D" stroke="none"/></svg><span style="font-size:13px;font-weight:700;color:#B5292D;">{{urgentCategoryLabel}} — Urgent</span><span style="font-size:11px;color:#B5292D;">· à l'instant</span></div>
+    </div>
+    <div style="padding:0 32px 28px;">
+      <div style="height:1px;background:#E4E0D6;margin-bottom:20px;"></div>
+      <div style="display:flex;flex-direction:column;gap:10px;background:#F3EFE4;border-radius:16px;padding:16px;margin-bottom:20px;">
+        <div style="display:flex;align-items:center;gap:8px;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#57544C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 8v5l3 2"/></svg><span style="font-size:12px;font-weight:700;color:#1C1B17;">Suivi</span></div>
+        <p style="margin:0;font-size:12px;line-height:1.5;color:#57544C;">L'équipe sécurité a été alertée en temps réel. Vous retrouvez le statut de votre signalement dans votre historique.</p>
+      </div>
+    </div>
+    <div style="flex-shrink:0;padding:0 20px 24px;">
+      <button onClick="{{goAccueilReset}}" style="all:unset;cursor:pointer;display:block;width:100%;text-align:center;background:#1C1B17;color:#FFFFFF;font-size:15px;font-weight:700;padding:16px;border-radius:999px;">Retour à l'accueil</button>
+    </div>
+  </div>
+  </sc-if>
+
+  <sc-if value="{{isHistorique}}" hint-placeholder-val="{{false}}">
+  <div class="screen">
+    <div style="padding:28px 20px 4px;"><h1 style="margin:0;font-size:22px;font-weight:800;color:#1C1B17;">Historique</h1></div>
+    <div style="flex-grow:1;overflow:hidden;padding:16px 20px 0;display:flex;flex-direction:column;gap:20px;">
+      <div style="display:flex;flex-direction:column;gap:10px;">
+        <span style="font-size:12px;font-weight:700;color:#8B877D;text-transform:uppercase;letter-spacing:0.04em;">Aujourd'hui</span>
+        <div style="display:flex;align-items:center;gap:12px;background:#FFFFFF;border-radius:16px;padding:14px 16px;">
+          <div style="width:36px;height:36px;border-radius:999px;background:#E9F5DC;display:flex;align-items:center;justify-content:center;flex-shrink:0;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#5FA62C" stroke-width="2" stroke-linecap="round"><path d="M8 14.5q4 3.2 8 0"/></svg></div>
+          <div style="flex-grow:1;display:flex;flex-direction:column;"><span style="font-size:14px;font-weight:600;color:#1C1B17;">Transport — Satisfait</span><span style="font-size:11px;color:#8B877D;">09:14 · Site de Dakar</span></div>
+        </div>
+        <div style="display:flex;align-items:center;gap:12px;background:#FBE2E1;border-radius:16px;padding:14px 16px;">
+          <div style="width:36px;height:36px;border-radius:999px;background:#E5484D;display:flex;align-items:center;justify-content:center;flex-shrink:0;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 2 20h20L12 3Z"/><path d="M12 10v4"/><circle cx="12" cy="17" r="0.6" fill="#FFFFFF" stroke="none"/></svg></div>
+          <div style="flex-grow:1;display:flex;flex-direction:column;"><span style="font-size:14px;font-weight:700;color:#B5292D;">Sécurité — Signalement urgent</span><span style="font-size:11px;color:#B5292D;">08:47 · Site de Dakar</span></div>
+          <span style="font-size:10px;font-weight:700;color:#B5292D;background:#FFFFFF;border-radius:999px;padding:4px 9px;flex-shrink:0;">Traité</span>
+        </div>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:10px;">
+        <span style="font-size:12px;font-weight:700;color:#8B877D;text-transform:uppercase;letter-spacing:0.04em;">Hier</span>
+        <div style="display:flex;align-items:center;gap:12px;background:#FFFFFF;border-radius:16px;padding:14px 16px;">
+          <div style="width:36px;height:36px;border-radius:999px;background:#DCEFC0;display:flex;align-items:center;justify-content:center;flex-shrink:0;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#457D1F" stroke-width="2" stroke-linecap="round"><path d="M7.6 9.6q1-1.1 2-0.1"/><path d="M14.4 9.6q1-1.1 2-0.1"/><path d="M7.5 14.2q4.5 4.3 9 0"/></svg></div>
+          <div style="flex-grow:1;display:flex;flex-direction:column;"><span style="font-size:14px;font-weight:600;color:#1C1B17;">Hébergement — Très satisfait</span><span style="font-size:11px;color:#8B877D;">19:32 · Site de Dakar</span></div>
+        </div>
+      </div>
+    </div>
+    <div style="flex-shrink:0;display:flex;justify-content:center;padding:10px 20px 22px;border-top:1px solid #EFEBE0;background:#FFFFFF;">
+      <div style="display:flex;width:100%;max-width:320px;justify-content:space-around;">
+        <div onClick="{{goAccueil}}" style="cursor:pointer;display:flex;flex-direction:column;align-items:center;gap:4px;">
+          <div style="width:44px;height:44px;border-radius:14px;display:flex;align-items:center;justify-content:center;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#8B877D" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m4 11 8-6 8 6"/><path d="M6 10v9h12v-9"/></svg></div>
+          <span style="font-size:11px;font-weight:600;color:#8B877D;">Accueil</span>
+        </div>
+        <div onClick="{{goHistorique}}" style="cursor:pointer;display:flex;flex-direction:column;align-items:center;gap:4px;">
+          <div style="width:44px;height:44px;border-radius:14px;background:#EFF7E1;display:flex;align-items:center;justify-content:center;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#5FA62C" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg></div>
+          <span style="font-size:11px;font-weight:700;color:#5FA62C;">Historique</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  </sc-if>
+
+</div>
+
+<script data-dc-script>
+class Component extends DCLogic {
+  state = { screen: 'bienvenue', rating: null, category: 'Transport', urgentCategory: null };
+
+  ring(active, color) { return active ? `0 0 0 3px ${color}` : 'none'; }
+  scale(active) { return active ? 'scale(1.1)' : 'scale(1)'; }
+
+  chipStyle(id) {
+    const active = this.state.urgentCategory === id;
+    return {
+      bg: active ? '#1C1B17' : '#F3EFE4',
+      color: active ? '#FFFFFF' : '#57544C',
+      ring: active ? '0 0 0 2px #E5484D' : 'none'
+    };
+  }
+
+  renderVals() {
+    const s = this.state;
+    const ratingLabels = { insatisfait: 'Insatisfait', moyen: 'Moyen', satisfait: 'Satisfait', tres: 'Très satisfait' };
+    const urgentLabels = { transport: 'Transport', hebergement: 'Hébergement', accueil: 'Accueil', securite: 'Sécurité', autre: 'Autre' };
+
+    const t = this.chipStyle('transport');
+    const h = this.chipStyle('hebergement');
+    const a = this.chipStyle('accueil');
+    const se = this.chipStyle('securite');
+    const au = this.chipStyle('autre');
+
+    return {
+      isBienvenue: s.screen === 'bienvenue',
+      isProfil: s.screen === 'profil',
+      isAccueil: s.screen === 'accueil',
+      isNotation: s.screen === 'notation',
+      isConfirmation: s.screen === 'confirmation',
+      isSignalement: s.screen === 'signalement',
+      isConfirmationUrgent: s.screen === 'confirmationUrgent',
+      isHistorique: s.screen === 'historique',
+
+      categoryName: s.category,
+      isTransport: s.category === 'Transport',
+      isHebergement: s.category === 'Hébergement',
+      isAccueilCat: s.category === 'Accueil',
+      isSecurite: s.category === 'Sécurité',
+
+      ratingLabel: s.rating ? ratingLabels[s.rating] : '',
+      ringInsatisfait: this.ring(s.rating === 'insatisfait', '#E5484D'),
+      ringMoyen: this.ring(s.rating === 'moyen', '#B8790E'),
+      ringSatisfait: this.ring(s.rating === 'satisfait', '#5FA62C'),
+      ringTres: this.ring(s.rating === 'tres', '#457D1F'),
+      scaleInsatisfait: this.scale(s.rating === 'insatisfait'),
+      scaleMoyen: this.scale(s.rating === 'moyen'),
+      scaleSatisfait: this.scale(s.rating === 'satisfait'),
+      scaleTres: this.scale(s.rating === 'tres'),
+      sendBg: s.rating ? '#7AC13B' : '#C9C5B8',
+
+      urgentCategoryLabel: s.urgentCategory ? urgentLabels[s.urgentCategory] : '',
+      bgTransportChip: t.bg, colorTransportChip: t.color, ringTransportChip: t.ring,
+      bgHebergementChip: h.bg, colorHebergementChip: h.color, ringHebergementChip: h.ring,
+      bgAccueilChip: a.bg, colorAccueilChip: a.color, ringAccueilChip: a.ring,
+      bgSecuriteChip: se.bg, colorSecuriteChip: se.color, ringSecuriteChip: se.ring,
+      bgAutreChip: au.bg, colorAutreChip: au.color, ringAutreChip: au.ring,
+      sendUrgentBg: s.urgentCategory ? '#E5484D' : '#E8ABAD',
+
+      goProfil: () => this.setState({ screen: 'profil' }),
+      goAccueil: () => this.setState({ screen: 'accueil' }),
+      goAccueilReset: () => this.setState({ screen: 'accueil', rating: null, urgentCategory: null }),
+      goHistorique: () => this.setState({ screen: 'historique' }),
+      goSignalement: () => this.setState({ screen: 'signalement', urgentCategory: null }),
+
+      goNotationTransport: () => this.setState({ screen: 'notation', category: 'Transport', rating: null }),
+      goNotationHebergement: () => this.setState({ screen: 'notation', category: 'Hébergement', rating: null }),
+      goNotationAccueilCat: () => this.setState({ screen: 'notation', category: 'Accueil', rating: null }),
+      goNotationSecurite: () => this.setState({ screen: 'notation', category: 'Sécurité', rating: null }),
+
+      pickInsatisfait: () => this.setState({ rating: 'insatisfait' }),
+      pickMoyen: () => this.setState({ rating: 'moyen' }),
+      pickSatisfait: () => this.setState({ rating: 'satisfait' }),
+      pickTres: () => this.setState({ rating: 'tres' }),
+      send: () => { if (this.state.rating) this.setState({ screen: 'confirmation' }); },
+
+      pickTransportChip: () => this.setState({ urgentCategory: 'transport' }),
+      pickHebergementChip: () => this.setState({ urgentCategory: 'hebergement' }),
+      pickAccueilChip: () => this.setState({ urgentCategory: 'accueil' }),
+      pickSecuriteChip: () => this.setState({ urgentCategory: 'securite' }),
+      pickAutreChip: () => this.setState({ urgentCategory: 'autre' }),
+      sendUrgent: () => { if (this.state.urgentCategory) this.setState({ screen: 'confirmationUrgent' }); }
+    };
+  }
+}
+</script>
+</x-dc>
+</body>
+</html>

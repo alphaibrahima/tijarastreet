@@ -1,24 +1,30 @@
 {
   "artboards": [
-    { "file": "Bienvenue.dc.html", "x": 0, "y": 0, "w": 390, "h": 844, "title": "Bienvenue" },
-    { "file": "Profil.dc.html", "x": 470, "y": 0, "w": 390, "h": 844, "title": "Profil — première visite" },
-    { "file": "Main.dc.html", "x": 940, "y": 0, "w": 390, "h": 844, "title": "Accueil" },
-    { "file": "Notation.dc.html", "x": 1410, "y": 0, "w": 390, "h": 844, "title": "Notation d'un service" },
-    { "file": "Confirmation.dc.html", "x": 1880, "y": 0, "w": 390, "h": 844, "title": "Confirmation" },
-    { "file": "SignalementUrgent.dc.html", "x": 2350, "y": 0, "w": 390, "h": 844, "title": "Signalement urgent" },
-    { "file": "ConfirmationUrgent.dc.html", "x": 2820, "y": 0, "w": 390, "h": 844, "title": "Confirmation — signalement urgent" },
-    { "file": "Historique.dc.html", "x": 3290, "y": 0, "w": 390, "h": 844, "title": "Historique" },
-    { "file": "HistoriqueVide.dc.html", "x": 3760, "y": 0, "w": 390, "h": 844, "title": "Historique — état vide" },
-    { "file": "SelectionParticipant.dc.html", "x": 4230, "y": 0, "w": 390, "h": 844, "title": "Sélection d'un participant (volontaire)" },
+    { "file": "Bienvenue.dc.html", "x": 0, "y": 0, "w": 390, "h": 844, "title": "Bienvenue", "page": "page-1" },
+    { "file": "Profil.dc.html", "x": 470, "y": 0, "w": 390, "h": 844, "title": "Profil — première visite", "page": "page-1" },
+    { "file": "Main.dc.html", "x": 940, "y": 0, "w": 390, "h": 844, "title": "Accueil", "page": "page-1" },
+    { "file": "Notation.dc.html", "x": 1410, "y": 0, "w": 390, "h": 844, "title": "Notation d'un service", "page": "page-1" },
+    { "file": "Confirmation.dc.html", "x": 1880, "y": 0, "w": 390, "h": 844, "title": "Confirmation", "page": "page-1" },
+    { "file": "SignalementUrgent.dc.html", "x": 2350, "y": 0, "w": 390, "h": 844, "title": "Signalement urgent", "page": "page-1" },
+    { "file": "ConfirmationUrgent.dc.html", "x": 2820, "y": 0, "w": 390, "h": 844, "title": "Confirmation — signalement urgent", "page": "page-1" },
+    { "file": "Historique.dc.html", "x": 3290, "y": 0, "w": 390, "h": 844, "title": "Historique", "page": "page-1" },
+    { "file": "HistoriqueVide.dc.html", "x": 3760, "y": 0, "w": 390, "h": 844, "title": "Historique — état vide", "page": "page-1" },
+    { "file": "SelectionParticipant.dc.html", "x": 4230, "y": 0, "w": 390, "h": 844, "title": "Sélection d'un participant (volontaire)", "page": "page-1" },
 
-    { "file": "Connexion.dc.html", "x": 0, "y": 984, "w": 1440, "h": 900, "title": "Connexion — équipe qualité" },
-    { "file": "Dashboard.dc.html", "x": 1520, "y": 984, "w": 1440, "h": 900, "title": "Tableau de bord — vue d'ensemble" },
-    { "file": "Signalements.dc.html", "x": 3040, "y": 984, "w": 1440, "h": 900, "title": "Tableau de bord — signalements" },
-    { "file": "Alertes.dc.html", "x": 4560, "y": 984, "w": 1440, "h": 900, "title": "Tableau de bord — alertes" },
-    { "file": "ExportNominatif.dc.html", "x": 6080, "y": 984, "w": 1440, "h": 900, "title": "Tableau de bord — export" },
-    { "file": "DetailCategorie.dc.html", "x": 7600, "y": 984, "w": 1440, "h": 900, "title": "Tableau de bord — détail catégorie" },
+    { "file": "Connexion.dc.html", "x": 0, "y": 984, "w": 1440, "h": 900, "title": "Connexion — équipe qualité", "page": "page-1" },
+    { "file": "Dashboard.dc.html", "x": 1520, "y": 984, "w": 1440, "h": 900, "title": "Tableau de bord — vue d'ensemble", "page": "page-1" },
+    { "file": "Signalements.dc.html", "x": 3040, "y": 984, "w": 1440, "h": 900, "title": "Tableau de bord — signalements", "page": "page-1" },
+    { "file": "Alertes.dc.html", "x": 4560, "y": 984, "w": 1440, "h": 900, "title": "Tableau de bord — alertes", "page": "page-1" },
+    { "file": "ExportNominatif.dc.html", "x": 6080, "y": 984, "w": 1440, "h": 900, "title": "Tableau de bord — export", "page": "page-1" },
+    { "file": "DetailCategorie.dc.html", "x": 7600, "y": 984, "w": 1440, "h": 900, "title": "Tableau de bord — détail catégorie", "page": "page-1" },
 
-    { "file": "PortailPublic.dc.html", "x": 0, "y": 2024, "w": 1440, "h": 1100, "title": "Portail public" }
+    { "file": "PortailPublic.dc.html", "x": 0, "y": 2024, "w": 1440, "h": 1100, "title": "Portail public", "page": "page-1" },
+
+    { "file": "PrototypeParticipant.dc.html", "x": 0, "y": 0, "w": 390, "h": 844, "title": "Prototype cliquable — parcours participant", "page": "page-2", "is_interactive": true, "expand": "fit" }
   ],
-  "launch": { "view": "canvas" }
+  "pages": [
+    { "id": "page-1", "name": "Écrans" },
+    { "id": "page-2", "name": "Prototype cliquable" }
+  ],
+  "launch": { "view": "canvas", "page": "page-2" }
 }
